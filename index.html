@@ -13,12 +13,12 @@
             theme: {
                 extend: {
                     colors: {
-                        'navy': '#1a237e',
+                        'navy': '#0a3d62',
                         'navy-light': '#3f51b5',
-                        'navy-dark': '#0d47a1',
+                        'navy-dark': '#1f2d3d',
                         'orange': '#ff6f00',
                         'orange-light': '#ff8f00',
-                        'orange-dark': '#e65100'
+                        'orange-dark': '#ff7043'
                     }
                 }
             }
@@ -92,7 +92,7 @@
 
             <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <!-- Waitlist Form -->
-                <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                <div class="order-2 bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
                     <div class="text-center mb-8">
                         <div class="flex items-center justify-center mx-auto mb-4">
                             <img src="./asset/logo.png" alt="mygobuddy logo" class="w-32 ">
@@ -101,7 +101,11 @@
                         <p class="text-gray-600">Get early access and be ready to start earning</p>
                     </div>
 
-                    <form id="waitlistForm" class="space-y-6">
+                    <form id="waitlistForm" action="https://formsubmit.co/recruiter@mygobuddy.com" method="POST" class="space-y-6">
+                        <!-- Required hidden fields for FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Buddy Waitlist Signup">
                         <div class="grid md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-semibold text-navy mb-2" for="firstName">
